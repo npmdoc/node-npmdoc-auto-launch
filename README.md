@@ -1,9 +1,14 @@
-# api documentation for  [auto-launch (v5.0.1)](https://github.com/4ver/node-auto-launch)  [![npm package](https://img.shields.io/npm/v/npmdoc-auto-launch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-auto-launch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-auto-launch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-auto-launch)
+# npmdoc-auto-launch
+
+#### api documentation for  [auto-launch (v5.0.1)](https://github.com/4ver/node-auto-launch)  [![npm package](https://img.shields.io/npm/v/npmdoc-auto-launch.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-auto-launch) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-auto-launch.svg)](https://travis-ci.org/npmdoc/node-npmdoc-auto-launch)
+
 #### Launch node applications or executables at login (Mac, Windows, and Linux)
 
-[![NPM](https://nodei.co/npm/auto-launch.png?downloads=true)](https://www.npmjs.com/package/auto-launch)
+[![NPM](https://nodei.co/npm/auto-launch.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/auto-launch)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-auto-launch/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-auto-launch_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-auto-launch/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-auto-launch/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-auto-launch/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-auto-launch/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-auto-launch/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-auto-launch/build/screenCapture.npmPackageListing.svg)
 
@@ -24,8 +29,7 @@
     },
     "contributors": [
         {
-            "name": "Adam Lynch",
-            "email": "adam@teamwork.com"
+            "name": "Adam Lynch"
         }
     ],
     "dependencies": {
@@ -70,17 +74,14 @@
     "main": "dist/index.js",
     "maintainers": [
         {
-            "name": "4ver",
-            "email": "me@don.al"
+            "name": "4ver"
         },
         {
-            "name": "adam-lynch",
-            "email": "contact@adamlynch.ie"
+            "name": "adam-lynch"
         }
     ],
     "name": "auto-launch",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/4ver/node-auto-launch.git"
@@ -91,16 +92,6 @@
     "version": "5.0.1"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module auto-launch](#apidoc.module.auto-launch)
-
-
-
-# <a name="apidoc.module.auto-launch"></a>[module auto-launch](#apidoc.module.auto-launch)
 
 
 
