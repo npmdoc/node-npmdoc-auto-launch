@@ -61,12 +61,71 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.auto-launch">module auto-launch</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.auto-launch.auto-launch">
+            function <span class="apidocSignatureSpan"></span>auto-launch
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.auto-launch" id="apidoc.module.auto-launch">module auto-launch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.auto-launch.auto-launch" id="apidoc.element.auto-launch.auto-launch">
+        function <span class="apidocSignatureSpan"></span>auto-launch
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AutoLaunch(arg) {
+  var isHidden, mac, name, path, versions;
+  name = arg.name, isHidden = arg.isHidden, mac = arg.mac, path = arg.path;
+  this.fixOpts = bind(this.fixOpts, this);
+  this.isEnabled = bind(this.isEnabled, this);
+  this.disable = bind(this.disable, this);
+  this.enable = bind(this.enable, this);
+  if (name == null) {
+    throw new Error(&#x27;You must specify a name&#x27;);
+  }
+  this.opts = {
+    appName: name,
+    isHiddenOnLaunch: isHidden != null ? isHidden : false,
+    mac: mac != null ? mac : {}
+  };
+  versions = typeof process !== &#x22;undefined&#x22; &#x26;&#x26; process !== null ? process.versions : void 0;
+  if (path != null) {
+    if (!isPathAbsolute(path)) {
+      throw new Error(&#x27;path must be absolute&#x27;);
+    }
+    this.opts.appPath = path;
+  } else if ((versions != null) &#x26;&#x26; ((versions.nw != null) || (versions[&#x27;node-webkit&#x27;] != null) || (versions.electron != null))) {
+    this.opts.appPath = process.execPath;
+  } else {
+    throw new Error(&#x27;You must give a path (this is only auto-detected for NW.js and Electron apps)&#x27;);
+  }
+  this.fixOpts();
+  this.api = null;
+  if (/^win/.test(process.platform)) {
+    this.api = require(&#x27;./AutoLaunchWindows&#x27;);
+  } else if (/darwin/.test(process.platform)) {
+    this.api = require(&#x27;./AutoLaunchMac&#x27;);
+  } else if (/linux/.test(process.platform)) {
+    this.api = require(&#x27;./AutoLaunchLinux&#x27;);
+  } else {
+    throw new Error(&#x27;Unsupported platform&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

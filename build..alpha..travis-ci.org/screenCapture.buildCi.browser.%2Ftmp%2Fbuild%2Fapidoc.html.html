@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/4ver/node-auto-launch"
-
-    >auto-launch (v5.0.1)</a>
+    <a href="https://github.com/4ver/node-auto-launch">auto-launch (v5.0.1)</a>
 </h1>
 <h4>Launch node applications or executables at login (Mac, Windows, and Linux)</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.auto-launch">module auto-launch</a><ol>
 
@@ -93,34 +86,34 @@
   this.disable = bind(this.disable, this);
   this.enable = bind(this.enable, this);
   if (name == null) {
-    throw new Error(&#x27;You must specify a name&#x27;);
+    throw new Error('You must specify a name');
   }
   this.opts = {
     appName: name,
     isHiddenOnLaunch: isHidden != null ? isHidden : false,
     mac: mac != null ? mac : {}
   };
-  versions = typeof process !== &#x22;undefined&#x22; &#x26;&#x26; process !== null ? process.versions : void 0;
+  versions = typeof process !== "undefined" &amp;&amp; process !== null ? process.versions : void 0;
   if (path != null) {
     if (!isPathAbsolute(path)) {
-      throw new Error(&#x27;path must be absolute&#x27;);
+      throw new Error('path must be absolute');
     }
     this.opts.appPath = path;
-  } else if ((versions != null) &#x26;&#x26; ((versions.nw != null) || (versions[&#x27;node-webkit&#x27;] != null) || (versions.electron != null))) {
+  } else if ((versions != null) &amp;&amp; ((versions.nw != null) || (versions['node-webkit'] != null) || (versions.electron != null))) {
     this.opts.appPath = process.execPath;
   } else {
-    throw new Error(&#x27;You must give a path (this is only auto-detected for NW.js and Electron apps)&#x27;);
+    throw new Error('You must give a path (this is only auto-detected for NW.js and Electron apps)');
   }
   this.fixOpts();
   this.api = null;
   if (/^win/.test(process.platform)) {
-    this.api = require(&#x27;./AutoLaunchWindows&#x27;);
+    this.api = require('./AutoLaunchWindows');
   } else if (/darwin/.test(process.platform)) {
-    this.api = require(&#x27;./AutoLaunchMac&#x27;);
+    this.api = require('./AutoLaunchMac');
   } else if (/linux/.test(process.platform)) {
-    this.api = require(&#x27;./AutoLaunchLinux&#x27;);
+    this.api = require('./AutoLaunchLinux');
   } else {
-    throw new Error(&#x27;Unsupported platform&#x27;);
+    throw new Error('Unsupported platform');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -135,3 +128,4 @@
     ]
 </div>
 </div>
+</body></html>
